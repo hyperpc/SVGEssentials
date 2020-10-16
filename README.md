@@ -1,6 +1,7 @@
 # SVG Essentials
 
 Sample Code of SVG Essentials
+![Cover image of SVG Essentials](http://akamaicovers.oreilly.com/images/0636920032335/lrg.jpg)
 
 ## ch01_basic
 
