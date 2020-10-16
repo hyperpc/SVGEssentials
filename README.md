@@ -4,7 +4,7 @@ Sample Code of SVG Essentials
 
 ## ch01_basic
 
-![Cat](../SVGEssentials/ch01_basic/Cat.svg)
+![Cat](ch01_basic/Cat.svg)
 
 ## ch02_WebSVG
 
