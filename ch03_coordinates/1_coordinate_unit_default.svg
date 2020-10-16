@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    
+    <title>Coordinate Unit</title>
+    <desc>A demo of coordinate default unit</desc>
+    <rect x="10" y="10" width="15" height="10" style="stroke: red; fill:none;" />
+    <rect x="10mm" y="10mm" width="15mm" height="10mm" style="stroke: blue; fill:none;" />
+</svg>
