@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="140" height="170" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mixed SVG</title>
+    <desc>SVG + HTML/XML</desc>
+    <g transform="skewX(20)">
+        <switch>
+            <foreignObject x="1em" y="10%" width="10em" height="100%"
+                requiredFeatures="http://www.w4.org/TR/SVG11/feature#Extensibility">
+                <body xmlns="http://www.w3.org/1999/xhtml">
+                    <p>This is an XHTML paragraph embedded with in a SVG!
+                    So this text will wrap nicely around multiple lines,
+                    but it will still be skewed from the SVG transform.
+                    </p>
+                </body>
+            </foreignObject>
+            <text x="1em" y="10%" dy="1em">
+            This SVG text won't wrap, so it will get cut off...
+            </text>
+        </switch>
+    </g>
+</svg>
