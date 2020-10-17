@@ -19,4 +19,14 @@ Sample Code of SVG Essentials
 
 ![DefaultRuler](ch04_drawing/0_default_ruler.svg)
 
-![DefaultRuler](ch04_drawing/2_width_line.svg)
+Standard Color:
+<span style="color:aqua;">aqua</span>, <span style="color:black;">black</span>, <span style="color:blue;">blue</span>, <span style="color:fuchsia;">fuchsia</span>
+<span style="color:gray;">gray</span>, <span style="color:green;">green</span>, <span style="color:lime;">lime</span>, <span style="color:maroon;">maroon</span>
+<span style="color:navy;">navy</span>, <span style="color:olive;">olive</span>, <span style="color:purple;">purple</span>, <span style="color:red;">red</span>
+<span style="color:silver;">silver</span>, <span style="color:teal;">teal</span>, <span style="color:white;">white</span>, <span style="color:yellow;">yellow</span>
+
+SVG Extension Color:
+http://www.w3.org/TR/SVG/types.html#ColorKeywords/
+
+CSS3 Color:
+http://www.w3.org/TR/css3-color/
