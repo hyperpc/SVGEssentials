@@ -13,4 +13,4 @@ Sample Code of SVG Essentials
 
 ## ch03_coordinates
 
-![DefaultCoordinateUnit](ch03_coordinates/2_aspect_ratio.svg)
+![DefaultCoordinateUnit](ch03_coordinates/2_aspect_ratio_slice.svg)
