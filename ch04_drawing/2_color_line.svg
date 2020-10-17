@@ -1,0 +1,13 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <line x1="10" x2="50" y1="10" y2="10" style="stroke:red; stroke-width:5;" />
+    <line x1="10" x2="50" y1="20" y2="20" style="stroke:#9f9; stroke-width:5;" />
+    <line x1="10" x2="50" y1="30" y2="30" style="stroke:#99f; stroke-width:5;" />
+    <line x1="10" x2="50" y1="40" y2="40" style="stroke:rgba(255,128,64, 0.5); stroke-width:5;" />
+    <line x1="10" x2="50" y1="50" y2="50" style="stroke:rgba(60%, 20%, 60%, 0.5); stroke-width:5;" />
+    <!-- hsl() and hsla() may not support in some svg render-->
+    <line x1="10" x2="50" y1="60" y2="60" style="stroke:hsla(120, 125, 125, 0.5); stroke-width:5;" />
+    <!--transparent equal rgba(0,0,0,0)-->
+    <line x1="10" x2="50" y1="70" y2="70" style="stroke:rgba(0,0,0,0.2); stroke-width:5;" />
+</svg>

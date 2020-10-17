@@ -1,0 +1,15 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Basic lines</title>
+    <desc>Draws a horizontal, vertical, and diagonal line</desc>
+    <image xlink:href="0_default_ruler.svg" x="0" y="0" width="200" height="200"/>
+    <g transform="translate(40,40)">
+        <!--h-line-->
+        <line x1="20" x2="90" y1="10" y2="10" style="stroke:black;" />
+        <!--v-line-->
+        <line x1="10" x2="10" y1="20" y2="90" style="stroke:black;" />
+        <!--d-line-->
+        <line x1="15" x2="85" y1="15" y2="85" style="stroke:black;" />
+    </g>
+</svg>
