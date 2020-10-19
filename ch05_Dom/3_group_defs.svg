@@ -1,0 +1,44 @@
+<svg width="260" height="260" viewBox="0 0 260 260" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Grouped Drawing</title>
+    <desc>Stick-figure drawings of a house and people</desc>
+    <defs>
+        <g id="house" style="stroke: black;">
+            <desc>House with door</desc>
+            <rect width="60" height="60" x="0" y="41" />
+            <polyline points="0 41, 30 0, 60 41" />
+            <polyline points="30 101, 30 71, 44 71, 44 101" />
+        </g>
+        <g id="man" style="fill: none; stroke: blue;">
+            <desc>Male human</desc>
+            <circle cx="10" cy="10" r="10" />
+            <line x1="10" x2="10" y1="20" y2="44" />
+            <polyline points="1 58, 10 44, 19 58" />
+            <polyline points="1 24, 10 30, 19 24" />
+        </g>
+        <g id="woman" style="fill: none; stroke: red;">
+            <desc>Female human</desc>
+            <circle cx="10" cy="10" r="10" />
+            <polyline points="10 20, 10 34, 0 44, 20 44, 10 34" />
+            <line x1="4" x2="8" y1="58" y2="44" />
+            <line x1="12" x2="16" y1="44" y2="58" />
+            <polyline points="1 24, 10 30, 19 24" />
+        </g>
+        <g id="couple">
+            <desc>Male and Female</desc>
+            <use xlink:href="#man" x="0" y="0"/>                
+            <use xlink:href="#woman" x="25" y="0"/>
+        </g>
+    </defs>
+
+    <use xlink:href="#house" x="10" y="10" style="fill: #cfc;" />
+    <use xlink:href="#couple" x="80" y="50"/>
+    
+    <use xlink:href="#house" x="130" y="10" style="fill:#99f;"/>
+    <use xlink:href="#couple" x="200" y="50" />
+    
+    <use xlink:href="#woman" x="35" y="155"/>
+    <use xlink:href="#house" x="65" y="115" style="fill:#c00;" />
+    <use xlink:href="#man" x="135" y="155" />
+</svg>

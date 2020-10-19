@@ -1,0 +1,7 @@
+<svg width="310" height="310" viewBox="0 0 310 310" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <ellipse rx="150" ry="120" cx="160" cy="160" style="fill:#999;" />
+    <ellipse rx="150" ry="120" cx="158" cy="158" style="fill:#cef;" />
+    <image xlink:href="kwanghwamun.jpg" x="72" y="92" width="160" height="120" />
+</svg>

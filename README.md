@@ -30,3 +30,7 @@ http://www.w3.org/TR/SVG/types.html#ColorKeywords/
 
 CSS3 Color:
 http://www.w3.org/TR/css3-color/
+
+## ch05_Dom
+
+![DefsGroup](ch05_Dom/3_group_defs.svg)
