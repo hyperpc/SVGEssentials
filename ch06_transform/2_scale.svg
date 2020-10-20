@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <g id="squares">
+            <rect width="20" height="20" x="10" y="10" style="stroke:red; stroke-opacity:0.4; fill:black; fill-opacity:0.5;" />
+        </g>
+        <g id="rectangles">
+            <rect width="20" height="10" x="10" y="60" style="stroke:green; stroke-opacity:0.4; fill:black; fill-opacity:0.5;" />
+        </g>
+    </defs>
+    <use xlink:href="#squares" />
+    <use xlink:href="#squares" transform="scale(2)" />
+    <use xlink:href="#squares" y="80" transform="scale(2, 1)" />
+    
+    <use xlink:href="#rectangles" />
+    <use xlink:href="#rectangles" transform="scale(2)" />
+</svg>

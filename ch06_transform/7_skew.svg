@@ -1,0 +1,25 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <g id="angle">
+            <polyline points="50 0, 0 0, 0 50" style="fill:none;" />
+        </g>
+    </defs>
+    <g style="stroke:gray; stroke-dasharray:4 4;">
+        <line x1="0" x2="200" y1="0" y2="0" />
+        <line x1="20" x2="20" y1="0" y2="90" />
+        <line x1="120" x2="120" y1="0" y2="90" />
+    </g>
+    <use xlink:href="#angle" style="stroke:black; stroke-width:2;" />
+    <g transform="translate(20,0)">
+        <g transform="skewX(30)">
+            <use xlink:href="#angle" style="fill:none; stroke:red; stroke-width:2;" />
+            <text x="0" y="60">skewX</text>
+        </g>        
+    </g>
+    <g transform="translate(120,0)">
+        <g transform="skewY(30)">
+            <use xlink:href="#angle" style="fill:none; stroke:green; stroke-width:2;" />
+            <text x="0" y="60">skewY</text>
+        </g>        
+    </g>
+</svg>

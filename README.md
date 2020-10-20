@@ -34,3 +34,7 @@ http://www.w3.org/TR/css3-color/
 ## ch05_Dom
 
 ![DefsGroup](ch05_Dom/3_group_defs.svg)
+
+## ch06_transform
+
+![SkewXY](ch06_transform/7_skew.svg)

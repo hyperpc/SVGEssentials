@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <g id="square">
+            <rect width="20" height="20" style="stroke-width:2; fill-opacity:0.5;" />
+        </g>
+        <g id="circles">
+            <circle cx="0" cy="0" r="10" style="stroke-width:2; fill-opacity:0.7;" />
+        </g>
+    </defs>
+    <use xlink:href="#square" x="0" y="0" style="stroke:red; fill:red;" />
+    <use xlink:href="#square" x="15" y="15" style="stroke:yellow; fill:yellow;" />
+    <use xlink:href="#square" transform="translate(30, 30)" style="stroke:green; fill:green;" />
+
+    <use xlink:href="#circles" x="90" y="20" style="stroke:red; fill:red;" />
+    <use xlink:href="#circles" x="85" y="30" style="stroke:green; fill:green;" />
+    <use xlink:href="#circles" x="95" y="30" style="stroke:blue; fill:blue;" />
+</svg>

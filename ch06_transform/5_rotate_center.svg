@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="3" fill="black" />
+    <g id="arrow" stroke="black">
+        <line x1="60" x2="90" y1="50" y2="50" />
+        <polygon points="90 50, 85 45, 85 55" />
+    </g>
+
+    <use xlink:href="#arrow" transform="rotate(60, 50 ,50)" />
+    <use xlink:href="#arrow" transform="rotate(180, 50 ,50)" />
+    <use xlink:href="#arrow" transform="rotate(-150, 50 ,50)" />
+    <use xlink:href="#arrow" transform="rotate(-90, 50 ,50)" />
+    <use xlink:href="#arrow" transform="rotate(-60, 50 ,50)" />
+</svg>
