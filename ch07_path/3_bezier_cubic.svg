@@ -1,0 +1,4 @@
+<svg width="350" height="300" viewBox="0 0 350 300" xmlns="http://www.w3.org/2000/svg">
+    <!--C,c cubic curve-->
+    <path d="M20 80 C50,20 150,60 200,120" style="stroke:black; fill:none;" />
+</svg>

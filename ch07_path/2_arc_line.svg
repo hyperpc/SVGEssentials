@@ -1,0 +1,15 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+    <!--A,z arc line-->
+    <g style="fill:none;">
+        <path d="M125,75 A100,50 0 0 0 225,125" stroke="red" />
+        <path d="M125,75 A100,50 0 0 1 225,125" stroke="green" />
+        <path d="M125,75 A100,50 0 1 0 225,125" stroke="yellow" />
+        <path d="M125,75 A100,50 0 1 1 225,125" stroke="blue" />
+    </g>
+    <g stroke="black;">
+        <ellipse rx="50" ry="40" cx="100" cy="230" style="fill:#999;" />
+        <ellipse rx="50" ry="40" cx="98" cy="228" style="fill:#cef;" />
+        <path d="M148,228 A50 40, 0 1 0 48,228 A25,20 0 1 0 98 228" style="fill:#fcc;" />
+        <path d="M98,228 A25,20 0 1 1 148,228" style="fill:#cef;" />
+    </g>
+</svg>

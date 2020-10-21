@@ -38,3 +38,7 @@ http://www.w3.org/TR/css3-color/
 ## ch06_transform
 
 ![SkewXY](ch06_transform/7_skew.svg)
+
+## ch07_arc_line
+
+![FillRule](ch07_path/4_filling_rule.svg)

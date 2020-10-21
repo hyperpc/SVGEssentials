@@ -1,0 +1,22 @@
+<svg width="250" height="250" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="mCircle" markerWidth="10" markerHeight="10" refX="5" refY="5">
+            <circle cx="5" cy="5" r="4" style="fill:none; stroke:black;" />
+        </marker>
+        <marker id="mArrow" markerWidth="6" markerHeight="10" refX="0" refY="4" orient="auto">
+            <path d="M 0 0 4 4 0 8" style="fill:none; stroke:black;" />
+        </marker>
+        <marker id="mTriangle" markerWidth="5" markerHeight="10" refX="5" refY="5" orient="auto">
+            <path d="M 0 0 5 5 0 10 Z" style="fill:black;" />
+        </marker>
+    </defs>
+
+    <path d="M 10 20 100 20 A20 30 0 0 1 120 50 L120 110" 
+        style="marker-start:url(#mCircle); 
+                marker-mid:url(#mArrow);
+                marker-end:url(#mTriangle);
+                fill:none; stroke:black;" />
+                
+    <path d="M 120 20 220 20 A20 30 0 0 1 230 50 L230 110" 
+        style="marker:url(#mArrow); fill:none; stroke:red;" />
+</svg>
