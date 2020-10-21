@@ -1,0 +1,39 @@
+<svg width="500" height="450" viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="tile1" x="0" y="0" width="20" height="20"
+            patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+            <path d="M0 0 Q5 20 10 10 T20 20" style="fill:none; stroke:black; stroke-width:1;" />
+            <path d="M0 0 h20 v20 h-20 z" style="fill:none; stroke: black; stroke-width:1;" />
+        </pattern>
+        <!--viewBox to zoom tile-->
+        <pattern id="tile2" x="0" y="0" width="20" height="20" viewBox="0 0 25 25"
+            patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+            <path d="M0 0 Q5 20 10 10 T20 20" style="fill:none; stroke:black; stroke-width:1;" />
+            <path d="M0 0 h20 v20 h-20 z" style="fill:none; stroke: black; stroke-width:1;" />
+        </pattern>
+    </defs>
+    <g transform="translate(20 20)">
+        <rect width="100" height="100" x="0" y="0" style="fill:url(#tile1); stroke:black;" />
+    </g>
+    <g transform="translate(135 20)">
+        <rect width="70" height="80" x="0" y="0" style="fill:url(#tile1); stroke:black;" />
+    </g>
+    <g transform="translate(220 20)">
+        <rect width="150" height="130" x="0" y="0" style="fill:url(#tile1); stroke:black;" />
+    </g>
+    <text x="20" y="170">
+        default(viewBox="0 0 20 20")
+    </text>
+    <g transform="translate(20 200)">
+        <rect width="100" height="100" x="0" y="0" style="fill:url(#tile2); stroke:black;" />
+    </g>
+    <g transform="translate(135 200)">
+        <rect width="70" height="80" x="0" y="0" style="fill:url(#tile2); stroke:black;" />
+    </g>
+    <g transform="translate(220 200)">
+        <rect width="150" height="130" x="0" y="0" style="fill:url(#tile2); stroke:black;" />
+    </g>
+    <text x="20" y="350">
+        viewBox="0 0 25 25"
+    </text>
+</svg>

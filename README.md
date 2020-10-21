@@ -42,3 +42,7 @@ http://www.w3.org/TR/css3-color/
 ## ch07_arc_line
 
 ![FillRule](ch07_path/4_filling_rule.svg)
+
+## ch08_PatternAndGradient
+
+![PatternGradientTransform](ch08_PatternAndGradient/4_pattern_gradient_transform.svg)

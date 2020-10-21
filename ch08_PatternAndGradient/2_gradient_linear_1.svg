@@ -1,0 +1,23 @@
+<svg width="500" height="250" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="two_hues">
+            <stop offset="0%" stop-color="#fc0" />
+            <stop offset="100%" stop-color="#09c" />
+        </linearGradient>
+        
+        <linearGradient id="three_stops">
+            <stop offset="0%" stop-color="#fc0" />
+            <stop offset="33.3%" stop-color="#c69" />
+            <stop offset="100%" stop-color="#6c9" />
+        </linearGradient>
+
+        <linearGradient id="three_stops_opacity">
+            <stop offset="0%" stop-color="#906" stop-opacity="1.0" />
+            <stop offset="50%" stop-color="#906" stop-opacity="0.3" />
+            <stop offset="100%" stop-color="#906" stop-opacity="0.1" />
+        </linearGradient>
+    </defs>
+    <rect width="200" height="100" x="20" y="20" style="fill:url(#two_hues); stroke:black;" />
+    <rect width="200" height="100" x="230" y="20" style="fill:url(#three_stops); stroke:black;" />
+    <rect width="200" height="100" x="130" y="130" style="fill:url(#three_stops_opacity); stroke:black;" />
+</svg>

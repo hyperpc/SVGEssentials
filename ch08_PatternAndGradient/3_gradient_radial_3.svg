@@ -1,0 +1,33 @@
+<svg width="350" height="300" viewBox="0 0 350 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <radialGradient id="three_stops" cx="0%" cy="0%" r="70%">
+            <stop offset="0%" stop-color="#f96" />
+            <stop offset="50%" stop-color="#9c9" />
+            <stop offset="100%" stop-color="#906" />
+        </radialGradient>
+        <radialGradient id="padded" xlink:href="#three_stops" spreadMethod="pad" />
+        <radialGradient id="repeated" xlink:href="#three_stops" spreadMethod="repeat" />
+        <radialGradient id="reflected" xlink:href="#three_stops" spreadMethod="reflect" />
+        
+        <radialGradient id="three_stops_2" cx="20" cy="20" r="98.7" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#f96" />
+            <stop offset="50%" stop-color="#9c9" />
+            <stop offset="100%" stop-color="#906" />
+        </radialGradient>
+        <radialGradient id="padded_2" xlink:href="#three_stops_2" spreadMethod="pad" />
+        <radialGradient id="repeated_2" xlink:href="#three_stops_2" spreadMethod="repeat" />
+        <radialGradient id="reflected_2" xlink:href="#three_stops_2" spreadMethod="reflect" />
+    </defs>
+    <rect width="100" height="100" x="20" y="20" style="fill:url(#padded); stroke:black;" />
+    <rect width="100" height="100" x="130" y="20" style="fill:url(#repeated); stroke:black;" />
+    <rect width="100" height="100" x="240" y="20" style="fill:url(#reflected); stroke:black;" />
+    <text x="20" y="140">
+        default(gradientUnits="objectBoundingBox")
+    </text>
+    <rect width="100" height="100" x="20" y="150" style="fill:url(#padded); stroke:black;" />
+    <rect width="100" height="100" x="130" y="150" style="fill:url(#repeated); stroke:black;" />
+    <rect width="100" height="100" x="240" y="150" style="fill:url(#reflected); stroke:black;" />
+    <text x="20" y="270">
+        gradientUnits="userSpaceOnUse"
+    </text>
+</svg>

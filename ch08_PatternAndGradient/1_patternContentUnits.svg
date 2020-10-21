@@ -1,0 +1,50 @@
+<svg width="500" height="450" viewBox="0 0 500 450" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="tile1" x="0" y="0" width=".2" height=".2"
+            patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox">
+            <path d="M0 0 Q.05 .20 .10 .10 T.20 .20" style="fill:none; stroke:black; stroke-width:0.01;" />
+            <path d="M0 0 h0.2 v0.2 h-0.2 z" style="fill:none; stroke: black; stroke-width:0.01;" />
+        </pattern>
+        <pattern id="tile2" x="0" y="0" width="20" height="20"
+            patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+            <path d="M0 0 Q5 20 10 10 T20 20" style="fill:none; stroke:black; stroke-width:1;" />
+            <path d="M0 0 h20 v20 h-20 z" style="fill:none; stroke: black; stroke-width:1;" />
+        </pattern>
+    </defs>
+    <g transform="translate(20 20)">
+        <rect width="100" height="100" x="0" y="0" style="fill:url(#tile1); stroke:black;" />
+    </g>
+    <g transform="translate(135 20)">
+        <rect width="70" height="80" x="0" y="0" style="fill:url(#tile1); stroke:black;" />
+    </g>
+    <g transform="translate(220 20)">
+        <rect width="150" height="130" x="0" y="0" style="fill:url(#tile1); stroke:black;" />
+    </g>
+    <text x="20" y="170">
+        patternUnits="objectBoundingBox" 
+    </text>
+    <text x="20" y="190"> 
+        patternContentUnits="objectBoundingBox"
+    </text>
+    <text x="20" y="210"> 
+        width=".2" height=".2" stroke-width:0.01
+    </text>
+    <g transform="translate(20 220)">
+        <rect width="100" height="100" x="0" y="0" style="fill:url(#tile2); stroke:black;" />
+    </g>
+    <g transform="translate(135 220)">
+        <rect width="70" height="80" x="0" y="0" style="fill:url(#tile2); stroke:black;" />
+    </g>
+    <g transform="translate(220 220)">
+        <rect width="150" height="130" x="0" y="0" style="fill:url(#tile2); stroke:black;" />
+    </g>
+    <text x="20" y="370">
+        patternUnits="userSpaceOnUse" 
+    </text>
+    <text x="20" y="390"> 
+        patternContentUnits="userSpaceOnUse"
+    </text>
+    <text x="20" y="410"> 
+        width="20" height="20" stroke-width:1
+    </text>
+</svg>
