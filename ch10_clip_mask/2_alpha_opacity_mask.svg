@@ -1,0 +1,84 @@
+<svg width="300" height="300" viewBox="0 0 300 300" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!--mask: maskContentUnits="objectBoundingBox"-->
+        <mask id="red_mask" x="0" y="0" width="1" height="1"
+            maskContentUnits="objectBoundingBox">
+            <rect width="1" height="1" x="0" y="0" fill="#f00" />
+        </mask>
+        <mask id="green_mask" x="0" y="0" width="1" height="1"
+            maskContentUnits="objectBoundingBox">
+            <rect width="1" height="1" x="0" y="0" fill="#0f0" />
+        </mask>
+        <mask id="blue_mask" x="0" y="0" width="1" height="1"
+            maskContentUnits="objectBoundingBox">
+            <rect width="1" height="1" x="0" y="0" fill="#00f" />
+        </mask>
+        <mask id="white_mask" x="0" y="0" width="1" height="1"
+            maskContentUnits="objectBoundingBox">
+            <rect width="1" height="1" x="0" y="0" fill="#fff" />
+        </mask>
+        <!--mask: fill-opacity-->
+        <mask id="full_mask" x="0" y="0" width="1" height="1"
+            maskContentUnits="objectBoundingBox">
+            <rect x="0" y="0" width="1" height="1" style="fill:white; fill-opacity:1.0;" />
+        </mask>
+        <mask id="three_mask" x="0" y="0" width="1" height="1"
+            maskContentUnits="objectBoundingBox">
+            <rect x="0" y="0" width="1" height="1" style="fill:white; fill-opacity:0.75;" />
+        </mask>
+        <mask id="half_mask" x="0" y="0" width="1" height="1"
+            maskContentUnits="objectBoundingBox">
+            <rect x="0" y="0" width="1" height="1" style="fill:white; fill-opacity:0.5;" />
+        </mask>
+        <mask id="one_mask" x="0" y="0" width="1" height="1"
+            maskContentUnits="objectBoundingBox">
+            <rect x="0" y="0" width="1" height="1" style="fill:white; fill-opacity:0.25;" />
+        </mask>
+    </defs>
+    <rect width="50" height="50" x="10" y="10" fill="#f00" />
+    <rect width="50" height="50" x="70" y="10" fill="#0f0" />
+    <rect width="50" height="50" x="130" y="10" fill="#00f" />
+    <rect width="50" height="50" x="190" y="10" fill="#fff" stroke="black" />
+    
+    <rect width="250" height="5" x="10" y="72" fill="yellow" />
+    <rect width="250" height="5" x="10" y="112" fill="yellow" />
+    <g style="font-size:14pt;">
+        <text x="20" y="80" style="stroke:black; fill:red" font-weight="bold">Red</text>
+        <g style="mask:url(#red_mask); text-anchor:middle;">
+            <circle cx="35" cy="115" r="25" fill="red" />
+        </g>
+        <text x="70" y="80" style="stroke:black; fill:green" font-weight="bold">Green</text>
+        <g style="mask:url(#green_mask); text-anchor:middle;">
+            <circle cx="95" cy="115" r="25" fill="green" />
+        </g>
+        <text x="135" y="80" style="stroke:black; fill:blue" font-weight="bold">Blue</text>
+        <g style="mask:url(#blue_mask); text-anchor:middle;">
+            <circle cx="155" cy="115" r="25" fill="blue" />
+        </g>
+        <text x="190" y="80" style="stroke:black; fill:white" font-weight="bold">White</text>
+        <g style="mask:url(#white_mask); text-anchor:middle;">
+            <circle cx="215" cy="115" r="25" fill="white" stroke="black" />
+        </g>        
+    </g>
+    <!--mask: fill-opacity-->
+    <g transform="translate(0, 150)" style="font-size:14pt; text-anchor:middle; fill:black;">
+        <g style="mask:url(#full_mask)">
+            <circle cx="35" cy="35" r="25" />
+        </g>
+        <text x="35" y="80">100%</text>
+        <g style="mask:url(#three_mask)">
+            <circle cx="95" cy="35" r="25" />
+        </g>
+        <text x="95" y="80">75%</text>
+        <g style="mask:url(#half_mask)">
+            <circle cx="155" cy="35" r="25" />
+        </g>
+        <text x="155" y="80">50%</text>
+        <g style="mask:url(#one_mask)">
+            <circle cx="215" cy="35" r="25" />
+        </g>
+        <text x="215" y="80">25%</text>
+    </g>
+</svg>

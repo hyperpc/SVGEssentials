@@ -1,0 +1,22 @@
+<svg width="340" height="340" viewBox="0 0 340 340" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <font-face font-family="bakbatn">
+            <font-face-src>
+                <font-face-uri xlink:href="kfont.svg#kfont-defn" />
+            </font-face-src>
+        </font-face>
+        <radialGradient id="fade">
+            <stop offset="0%" style="stop-color:white; stop-opacity:1.0;" />
+            <stop offset="80%" style="stop-color:white; stop-opacity:0.5;" />
+            <stop offset="100%" style="stop-color:white; stop-opacity:0.0;" />
+        </radialGradient>
+        <mask id="fade_mask" maskContentUnits="objectBoundingBox">
+            <rect width="1" height="1" x="0" y="0" style="fill:url(#fade);" />
+        </mask>
+    </defs>
+    <use xlink:href="ksymbol.svg#symbol" />
+    <image xlink:href="kwanghwamun.jpg" style="mask:url(#fade_mask);"
+        x="72" y="92" width="160" height="120" />
+</svg>

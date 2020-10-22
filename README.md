@@ -50,3 +50,7 @@ http://www.w3.org/TR/css3-color/
 ## ch09_text
 
 ![TextPathDemo](ch09_text/5_demo.svg)
+
+## ch10_clip_mask
+
+![ClipMaskImage](ch10_clip_mask/3_clip_mask_demo.svg)

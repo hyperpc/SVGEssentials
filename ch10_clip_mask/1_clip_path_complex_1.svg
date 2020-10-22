@@ -1,0 +1,31 @@
+<svg width="300" height="300" viewBox="0 0 300 300" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <clipPath id="curve_clip">
+            <path id="curve1" style="stroke:black;fill:none;" 
+                d="M5 55 C25 5 45 -25 75 55 85 85 20 105 40 55 Z" />
+        </clipPath>
+        <clipPath id="text_clip">
+            <text id="text1" x="20" y="20" transform="rotate(60)"
+                style="stroke:black; fill:none; font-family:'Liberation Sans'; font-size:48pt;">
+                CLIP
+            </text>
+        </clipPath>
+        <g id="shapes">
+            <rect width="90" height="60" x="0" y="50" style="fill:#999;" />
+            <circle cx="25" cy="25" r="25" style="fill:#666;" />
+            <polygon points="30 0 80 0 80 100" style="fill:#ccc;" />
+        </g>
+    </defs>
+    <use xlink:href="#shapes" style="clip-path:url(#curve_clip);" />
+    <use xlink:href="#shapes" style="clip-path:url(#text_clip);" transform="translate(100,0)"/>
+    <g transform="translate(0, 150)">
+        <use xlink:href="#shapes" />
+        <use xlink:href="#curve1" />
+    </g>
+    <g transform="translate(100,150)">
+        <use xlink:href="#shapes" />
+        <use xlink:href="#text1" />
+    </g>
+</svg>
