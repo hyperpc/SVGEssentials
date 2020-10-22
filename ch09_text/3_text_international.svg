@@ -55,7 +55,7 @@
         <font-face font-family="bakbatn">
             <font-face-src>
                 <font-face-uri xlink:href="kfont.svg#kfont-defn">
-                    <font-face-format string="svg">
+                    <font-face-format string="svg" />
                 </font-face-uri>
             </font-face-src>
         </font-face>
