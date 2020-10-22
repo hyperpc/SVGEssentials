@@ -1,0 +1,29 @@
+<svg width="350" height="350" viewBox="0 0 350 350" xmlns="http://www.w3.org/2000/svg">
+    <g style="font-size:10pt;">
+        <text x="20" y="20" style="font-weight:bold;">bold</text>
+        <text x="60" y="20" style="font-style:italic;">italic</text>
+        <text x="120" y="20" style="text-decoration:underline;">under</text>
+        <text x="160" y="20" style="text-decoration:overline;">over</text>
+        <text x="190" y="20" style="text-decoration:line-through;">through</text>
+        <text x="20" y="40" style="word-spacing:10pt;">more word space</text>
+        <text x="20" y="60" style="word-spacing:-3pt;">less word space</text>
+        <text x="20" y="80" style="letter-spacing:5pt;">wide letter space</text>
+        <text x="20" y="100" style="letter-spacing:-2pt;">narrow letter space</text>
+    </g>
+    <g style="font-size:10pt;">
+        <!--text-anchor: based on current coordinate point-->
+        <path d="M100 110 100 160" style="stroke:gray;" />
+        <text x="100" y="120" style="text-anchor:start;">Start</text>
+        <text x="100" y="140" style="text-anchor:middle;">Middle</text>
+        <text x="100" y="160" style="text-anchor:end;">End</text>
+    </g>
+    <g style="font-size:10pt;">
+        <path d="M20 170 20 220 M220 170 220 220" style="stroke:gray;" />
+        <text x="20" y="180" textLength="200" lengthAdjust="spacing">Two words</text>
+        <text x="20" y="210" textLength="200" lengthAdjust="spacingAndGlyphs">Two words</text>
+        <text x="20" y="230">Two words <tspan style="font-size:10pt;">(normal length)</tspan></text>
+        <path d="M20 260 20 330 M100 260 100 330" style="stroke:gray;" />
+        <text x="20" y="270" textLength="80" lengthAdjust="spacing">Two words</text>
+        <text x="20" y="310" textLength="80" lengthAdjust="spacingAndGlyphs">Two words</text>
+    </g>
+</svg>

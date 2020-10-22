@@ -1,0 +1,25 @@
+<svg width="375" height="350" viewBox="0 0 375 350" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <font-face font-family="bakbatn">
+            <font-face-src>
+                <font-face-uri xlink:href="kfont.svg#kfont-defn">
+                    <font-face-format string="svg">
+                </font-face-uri>
+            </font-face-src>
+        </font-face>
+        <path id="upper_curve" d="M-8 154 A162 130 0 1 1 316 154" />
+        <path id="lower_curve" d="M-21 154 A175 140 0 1 0 329 154" />
+    </defs>
+    <ellipse cx="154" cy="154" rx="150" ry="120" style="fill:#999" />
+    <ellipse cx="152" cy="152" rx="150" ry="120" style="fill:#cef" />
+    <path d="M302 152 A150 120 0 1 0 2 152 A75 60 0 1 0 152 152" style="fill:#fcc;" />
+    <path d="M152 152 A75 60 0 1 1 302 152" style="fill:#cef;" />
+    <text font-family="bakbatn, serif" style="font-size:24pt; text-anchor:middle;">
+        <textPath xlink:href="#upper_curve" startOffset="50%">서울 - 대한민국</textPath>
+    </text>
+    <text style="font-size:14pt; text-anchor:middle;">
+        <textPath xlink:href="#lower_curve" startOffset="50%">
+            Seoul - Republic of Korea
+        </textPath>
+    </text>
+</svg>

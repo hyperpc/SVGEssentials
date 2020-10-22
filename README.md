@@ -46,3 +46,7 @@ http://www.w3.org/TR/css3-color/
 ## ch08_PatternAndGradient
 
 ![PatternGradientTransform](ch08_PatternAndGradient/4_pattern_gradient_transform.svg)
+
+## ch09_text
+
+![TextPathDemo](ch09_text/5_demo.svg)

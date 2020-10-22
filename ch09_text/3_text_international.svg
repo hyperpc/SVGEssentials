@@ -1,0 +1,66 @@
+<svg width="400" height="270" viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg">
+    <g style="font-size:14pt;">
+        <text x="10" y="20">Greek: </text>
+        <text x="100" y="20">αβγδε</text>
+        
+        <text x="10" y="40">Russian: </text>
+        <text x="100" y="40">абвгд</text>
+        
+        <text x="10" y="60">Hebrew: </text>
+        <text x="100" y="60">אבגדה (written right to left)</text>
+        
+        <text x="10" y="80">Arabic: </text>
+        <text x="100" y="80">ا ب ج د(written right to left)</text>
+        <!--direction:rtl; unicode-bidi:bidi-override;-->
+        <text x="10" y="110">
+            This is
+            <tspan style="direction:rtl; unicode-bidi:bidi-override; font-weight:bold;">
+            right-to-left</tspan>
+            text.
+        </text>
+    </g>
+    <!--switch-->
+    <circle cx="60" cy="180" r="20" style="stroke:black; fill:none;" />
+    <g font-size="12pt">
+        <switch>
+            <!--
+            <g systemLanguage="en-us">
+                <text x="30" y="150">A circle</text>
+                <text x="30" y="220">without color.</text>
+            </g>
+            -->
+            <g systemLanguage="en-UK">
+                <text x="30" y="150">A circle</text>
+                <text x="30" y="220">without color.</text>
+            </g>
+            <g systemLanguage="en">
+                <text x="30" y="150">A circle</text>
+                <text x="30" y="220">without color.</text>
+            </g>
+            <g systemLanguage="es">
+                <text x="30" y="150">Un círculo</text>
+                <text x="30" y="220">sin color.</text>
+            </g>
+            <g systemLanguage="ru">
+                <text x="30" y="150">Круг</text>
+                <text x="30" y="220">без света.</text>
+            </g>
+            <g>
+                <text x="30" y="150">圆</text>
+                <text x="30" y="220">没有颜色。</text>
+            </g>
+        </switch>
+    </g>
+    <defs>
+        <font-face font-family="bakbatn">
+            <font-face-src>
+                <font-face-uri xlink:href="kfont.svg#kfont-defn">
+                    <font-face-format string="svg">
+                </font-face-uri>
+            </font-face-src>
+        </font-face>
+    </defs>
+    <text font-size="28" x="30" y="260">
+        서울 - 대한민국
+    </text>
+</svg>

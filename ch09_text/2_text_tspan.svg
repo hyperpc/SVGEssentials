@@ -1,0 +1,27 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <text x="10" y="20" style="font-size:12pt;">
+        Switch among <tspan style="font-style:italic;">italic</tspan>, normal and <tspan style="font-weight:bold;">bold</tspan> text.
+    </text>
+    <text x="10" y="40" style="font-size:12pt;">
+        F<tspan x="30" dy="2">a</tspan><tspan dy="3">l</tspan><tspan dy="8">l</tspan>
+    </text>
+    <text x="10" y="60" style="font-size:12pt;">
+        They dined on mince, and slices of quince,
+        <tspan x="20" y="75">Which they ate with a runcible spoon;</tspan>
+        <tspan x="10" y="90">And hand in hand, on the edge of the sand,</tspan>
+        <tspan x="20" y="105">They danced by the light of the moon.</tspan>
+    </text>
+    <text x="30" y="130" style="font-size:18px;">
+        It's <tspan dx="0 4 -3 5 -4 6" dy="0 -3 7 3 -2 -8" rotate="5 10 -5 -20 0 15">shaken</tspan>, not stirred.
+    </text>
+    <text x="20" y="160" style="font-size:16pt;">
+        C<tspan style="baseline-shift:sub; font-size:10pt;">12</tspan>H<tspan style="baseline-shift:sub; font-size:10pt;">22</tspan>O<tspan style="baseline-shift:sub; font-size:10pt;">11</tspan>(sugar)
+    </text>
+    <text x="20" y="190" style="font-size:16pt;">
+        6.02 x 10<tspan style="baseline-shift:super; font-size:10pt;">23</tspan>(Avogadro's number)
+    </text>
+    <text x="10" y="210" transform="rotate(90, 10, 210)">Rotate 90</text>
+    <text x="50" y="210" style="writing-mode:tb;">Writing Mode tb</text>
+    <text x="90" y="210" style="writing-mode:tb; glyph-orientation-vertical:0;">Vertical zero</text>
+    <text x="110" y="210" style="writing-mode:tb; glyph-orientation-vertical:0; letter-spacing:-1pt">Vertical zero</text>
+</svg>
