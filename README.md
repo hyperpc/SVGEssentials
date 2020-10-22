@@ -53,4 +53,9 @@ http://www.w3.org/TR/css3-color/
 
 ## ch10_clip_mask
 
-![ClipMaskImage](ch10_clip_mask/2_alpha_opacity_mask.svg)
+<!--
+![ClipMaskImage](ch10_clip_mask/3_clip_mask_demo_2.svg)
+-->
+![AlphaOpacityMask](ch10_clip_mask/2_alpha_opacity_mask.svg)
+
+## ch11_blur
