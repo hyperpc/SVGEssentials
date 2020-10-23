@@ -1,0 +1,113 @@
+<svg width="400" height="400" viewBox="0 0 400 400" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="400" height="400" viewBox="0 0 400 400" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!--offsetBlur-->
+        <filter id="drop_shadow_1">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feMerge>
+                <feMergeNode in="offsetBlur" />                    
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="drop_shadow_2">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feMerge>
+                <feMergeNode in="offsetBlur" />                    
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="drop_shadow_3">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4 0" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feMerge>
+                <feMergeNode in="offsetBlur" />                    
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="drop_shadow_4">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4 4" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feMerge>
+                <feMergeNode in="offsetBlur" />                    
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <g id="petal">
+            <path d="M10 0 Q27 -15 40 0 27 15 10 0" />
+        </g>
+    </defs>
+    <g id="flower_1" filter="url(#drop_shadow_1)">
+        <path d="M50 50 Q40 70 70 100 T70 150" style="stroke:green; fill:none; stroke-width:3;" />
+        <path d="M70 100 Q80 70 120 80 90 75 75 105" style="stroke:none; fill:green;" />
+        <circle cx="40" cy="50" r="10" style="fill:gray;" />
+        <g style="stroke:black; fill:yellow;">
+            <use xlink:href="#petal" transform="translate(40,50)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(40)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(80)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(120)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(160)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(200)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(240)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(280)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(320)" />
+        </g>
+    </g>
+    <text x="10" y="170">stdDeviation="2"</text>
+    <g id="flower_2" filter="url(#drop_shadow_2)" transform="translate(150, 0)">
+        <path d="M50 50 Q40 70 70 100 T70 150" style="stroke:green; fill:none; stroke-width:3;" />
+        <path d="M70 100 Q80 70 120 80 90 75 75 105" style="stroke:none; fill:green;" />
+        <circle cx="40" cy="50" r="10" style="fill:gray;" />
+        <g style="stroke:black; fill:yellow;">
+            <use xlink:href="#petal" transform="translate(40,50)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(40)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(80)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(120)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(160)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(200)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(240)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(280)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(320)" />
+        </g>
+    </g>
+    <text x="150" y="170">stdDeviation="4"</text>
+    <g id="flower_3" filter="url(#drop_shadow_3)" transform="translate(0, 170)">
+        <path d="M50 50 Q40 70 70 100 T70 150" style="stroke:green; fill:none; stroke-width:3;" />
+        <path d="M70 100 Q80 70 120 80 90 75 75 105" style="stroke:none; fill:green;" />
+        <circle cx="40" cy="50" r="10" style="fill:gray;" />
+        <g style="stroke:black; fill:yellow;">
+            <use xlink:href="#petal" transform="translate(40,50)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(40)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(80)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(120)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(160)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(200)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(240)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(280)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(320)" />
+        </g>
+    </g>
+    <text x="10" y="340">stdDeviation="4 0"</text>
+    <g id="flower_4" filter="url(#drop_shadow_4)" transform="translate(150, 170)">
+        <path d="M50 50 Q40 70 70 100 T70 150" style="stroke:green; fill:none; stroke-width:3;" />
+        <path d="M70 100 Q80 70 120 80 90 75 75 105" style="stroke:none; fill:green;" />
+        <circle cx="40" cy="50" r="10" style="fill:gray;" />
+        <g style="stroke:black; fill:yellow;">
+            <use xlink:href="#petal" transform="translate(40,50)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(40)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(80)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(120)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(160)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(200)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(240)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(280)" />
+            <use xlink:href="#petal" transform="translate(40,50) rotate(320)" />
+        </g>
+    </g>
+    <text x="150" y="340">stdDeviation="4 4"</text>
+</svg>
