@@ -1,0 +1,96 @@
+<svg width="400" height="700" viewBox="0 0 400 700" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!--over, in, out, atop, xor, arithmetic-->
+        <filter id="over">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feComposite in="SourceGraphic" in2="offsetBlur" operator="over" />
+        </filter>
+        <filter id="in">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feComposite in="SourceGraphic" in2="offsetBlur" operator="in" />
+        </filter>
+        <filter id="out">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feComposite in="SourceGraphic" in2="offsetBlur" operator="out" />
+        </filter>
+        <filter id="atop">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feComposite in="SourceGraphic" in2="offsetBlur" operator="atop" />
+        </filter>
+        <filter id="xor">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feComposite in="SourceGraphic" in2="offsetBlur" operator="xor" />
+        </filter>
+        <filter id="arithmetic_1">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feComposite in="SourceGraphic" in2="offsetBlur" operator="arithmetic" k1="0.5" k2="0.5" k3="0.5" k4="0" />
+        </filter>
+        <!--melt-->
+        <filter id="arithmetic_2">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+            <feComposite in="SourceGraphic" in2="offsetBlur" operator="arithmetic" k1="0" k2="0.3" k3="0.7" k4="0" />
+        </filter>
+        <!--hollow: in, out-->
+        <filter id="sky_in" filterUnits="objectBoundingBox">
+            <feImage xlink:href="sky.jpg" result="sky" preserveAspectRatio="none"
+                x="0" y="0" width="100%" height="100%" />
+            <feComposite in="sky" in2="SourceGraphic" operator="in" />
+        </filter>
+        <filter id="sky_out" filterUnits="objectBoundingBox">
+            <feImage xlink:href="sky.jpg" result="sky" preserveAspectRatio="none"
+                x="0" y="0" width="100%" height="100%" />
+            <feComposite in="sky" in2="SourceGraphic" operator="out" />
+        </filter>
+        <!--petal-->
+        <g id="petal">
+            <path d="M 10 0 Q 27 -15 40 0 27 15 10 0" />
+        </g>
+        <!--folower-->
+        <g id="flower">
+            <path d="M 50 50 Q 40 70 70 100 T 70 150"
+                style="stroke: green; fill: none; stroke-width: 3;"/>
+            <path d="M 70 100 Q 80 70, 120 80, 90 75, 75 105"
+                style="stroke: none; fill: green;"/>
+            <circle cx="40" cy="50" r="10" fill="gray"/>
+            <g style="stroke: black; fill: yellow;">
+                <use xlink:href="#petal" transform="translate(40,50)"/>
+                <use xlink:href="#petal" transform="translate(40,50) rotate(40)"/>
+                <use xlink:href="#petal" transform="translate(40,50) rotate(80)"/>
+                <use xlink:href="#petal" transform="translate(40,50) rotate(120)"/>
+                <use xlink:href="#petal" transform="translate(40,50) rotate(160)"/>
+                <use xlink:href="#petal" transform="translate(40,50) rotate(200)"/>
+                <use xlink:href="#petal" transform="translate(40,50) rotate(240)"/>
+                <use xlink:href="#petal" transform="translate(40,50) rotate(280)"/>
+                <use xlink:href="#petal" transform="translate(40,50) rotate(320)"/>
+            </g>
+        </g>
+    </defs>
+    <!--text-->
+    <g style="font-size:30px; font-weight:bold;fill:#f00;">
+        <text x="1ex" y="1em">
+            <tspan x="1ex" filter="url(#over)">over</tspan>
+            <tspan dx="1ex" filter="url(#in)">in</tspan>
+            <tspan dx="1ex" filter="url(#out)">out</tspan>
+            <tspan x="1ex" dy="1.5em" filter="url(#atop)">atop</tspan>
+            <tspan dx="1ex" filter="url(#xor)">xor</tspan>
+            <tspan dx="1ex" filter="url(#arithmetic_1)">arithmetic_1</tspan>
+            <tspan x="1ex" dy="2em" filter="url(#arithmetic_2)">arithmetic_2</tspan>
+        </text>
+    </g>
+    <!--hollow flower-->
+    <g>
+        <use xlink:href="#flower" style="filter:url(#sky_in)" transform="translate(20,150)" /> 
+        <text x="70" y="330">in</text>
+        <use xlink:href="#flower" style="filter:url(#sky_out)" transform="translate(150,150)" />
+        <text x="190" y="330">out</text>
+    </g>
+</svg>

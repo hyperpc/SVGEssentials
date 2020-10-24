@@ -1,0 +1,96 @@
+<svg width="400" height="400" viewBox="0 0 400 400" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <!--table /discrete / inverted-->
+        <filter id="table_filter" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB"
+            x="0%" y="0%" width="100%" height="100%">
+            <feComponentTransfer>
+                <feFuncG type="table" tableValues="0.0 0.5 0.6 0.85 1.0" />
+            </feComponentTransfer>
+        </filter>
+        <filter id="discrete_filter" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB"
+            x="0%" y="0%" width="100%" height="100%">
+            <feComponentTransfer>
+                <feFuncG type="discrete" tableValues="0.125 0.375 0.625 0.875" />
+            </feComponentTransfer>
+        </filter>
+        <filter id="invert_filter" filterUnits="objectBoundingBox" color-interpolation-filters="sRGB"
+            x="0%" y="0%" width="100%" height="100%">
+            <feComponentTransfer in="SourceGraphic">
+                <feFuncG type="table" tableValues="0.6 0" />
+            </feComponentTransfer>
+        </filter>
+        <linearGradient id="green_grad">
+            <stop offset="0%" stop-color="#000" />
+            <stop offset="100%" stop-color="#393" />
+        </linearGradient>
+        <g id="green_bar">
+            <rect width="200" height="30" x="0" y="0" style="fill:url(#green_grad);" />
+        </g>
+        <!--RGB / sRGB-->
+        <linearGradient id="rgb_1" color-interpolation="linearRGB">
+            <stop offset="0%" stop-color="#000" />
+            <stop offset="100%" stop-color="#393" />
+        </linearGradient>
+        <linearGradient id="rgb_2" color-interpolation="linearRGB">
+            <stop offset="0%" stop-color="#c03" />
+            <stop offset="50%" stop-color="#6c3" />
+            <stop offset="100%" stop-color="#09c" />
+        </linearGradient>
+        <linearGradient id="rgb_3" color-interpolation="linearRGB">
+            <stop offset="0%" stop-color="#000" />
+            <stop offset="100%" stop-color="rgb(100%,100%,100%)" />
+        </linearGradient>
+        <linearGradient id="srgb_1" color-interpolation="sRGB">
+            <stop offset="0%" stop-color="#000" />
+            <stop offset="100%" stop-color="#393" />
+        </linearGradient>
+        <linearGradient id="srgb_2" color-interpolation="sRGB">
+            <stop offset="0%" stop-color="#c03" />
+            <stop offset="50%" stop-color="#6c3" />
+            <stop offset="100%" stop-color="#09c" />
+        </linearGradient>
+        <linearGradient id="srgb_3" color-interpolation="sRGB">
+            <stop offset="0%" stop-color="#000" />
+            <stop offset="100%" stop-color="rgb(100%,100%,100%)" />
+        </linearGradient>        
+        <g id="color_bar">
+            <rect x="0" y="0" width="200" height="30"/>
+        </g>
+    </defs>
+    <!--table /discrete / inverted-->
+    <g style="font-family:'Lineration Sans','Helvetica',sans-serif" transform="translate(10,10)">
+        <use xlink:href="#green_bar" transform="translate(0,0)"/>
+        <text x="200" y="20">Original</text>
+
+        <use xlink:href="#green_bar" transform="translate(0,40)" style="filter:url(#table_filter)"/>
+        <text x="200" y="60"><tspan style="font-family:Courier,monospace;">table</tspan> transfer</text>
+
+        <use xlink:href="#green_bar" transform="translate(0,80)" style="filter:url(#discrete_filter)"/>
+        <text x="200" y="100"><tspan style="font-family:Courier,monospace;">discrete</tspan> transfer</text>
+
+        <use xlink:href="#green_bar" transform="translate(0,120)" style="filter:url(#invert_filter)"/>
+        <text x="200" y="140"><tspan style="font-family:Courier,monospace;">Inverted</tspan> transfer</text>
+
+        <path d="M50 0 v150 M100 0 v159 M150 0 v150" style="stroke:white; fill:none;"/>
+    </g>
+    <!--RGB / sRGB-->
+    <g transform="translate(10,180)">
+        <text x="10" y="15">linearRGB</text>
+        <use xlink:href="#color_bar" transform="translate(0,25)" fill="url(#rgb_1)"/>
+        <use xlink:href="#color_bar" transform="translate(0,80)" fill="url(#rgb_2)"/>
+        <use xlink:href="#color_bar" transform="translate(0,135)" fill="url(#rgb_3)"/>
+    </g>
+    <g transform="translate(220,180)">
+        <text x="10" y="15">sRGB</text>
+        <use xlink:href="#color_bar" transform="translate(0,25)" fill="url(#srgb_1)"/>
+        <use xlink:href="#color_bar" transform="translate(0,80)" fill="url(#srgb_2)"/>
+        <use xlink:href="#color_bar" transform="translate(0,135)" fill="url(#srgb_3)"/>
+    </g>
+    <g transform="translate(150,225)">
+        <text x="10" y="25">black->green</text>
+        <text x="10" y="80">red->green->blue</text>
+        <text x="10" y="135">black->white</text>
+    </g>
+</svg>
