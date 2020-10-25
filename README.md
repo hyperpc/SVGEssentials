@@ -59,3 +59,5 @@ http://www.w3.org/TR/css3-color/
 ![AlphaOpacityMask](ch10_clip_mask/2_alpha_opacity_mask.svg)
 
 ## ch11_blur
+
+![feTurbulence](ch11_blur/13_feTurbulence.svg)

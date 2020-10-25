@@ -1,0 +1,29 @@
+<svg width="220" height="120" viewBox="0 0 220 120" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter id="blur_background">
+            <feGaussianBlur in="BackgroundImage" stdDeviation="2" result="blur" />
+            <feComposite in="blur" in2="SourceGraphic" operator="in"/>
+            <feOffset dx="4" dy="4" result="offsetBlur" />
+        </filter>
+        <filter id="blur_background_2">
+            <feImage xlink:href="feBlend.png" result="bg2" />
+            <feGaussianBlur in="bg2" stdDeviation="2" result="blur2" />
+            <feComposite in="blur2" in2="SourceGraphic" operator="in" />
+            <feOffset dx="4" dy="4" result="offsetBlur2" />
+        </filter>
+    </defs>
+    <g enable-background="new" transform="translate(10,10)">
+        <rect width="60" height="60" x="0" y="0"
+            style="fill:lightblue; stroke:blue; stroke-width:10;" />
+        <circle cx="40" cy="40" r="30"
+            style="fill:#fff; filter:url(#blur_background);" />
+    </g>
+    <g id="background2" transform="translate(100, 10)">
+        <rect width="60" height="60" x="0" y="0"
+            style="fill:lightblue; stroke:blue; stroke-width:10;" />
+    </g>
+        <circle cx="140" cy="50" r="30"
+            style="fill:#fff; filter:url(#blur_background_2);" />
+</svg>
