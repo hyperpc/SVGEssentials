@@ -1,0 +1,36 @@
+<svg width="250" height="260" viewBox="0 0 250 260" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="cubicCurve" d="M50 75 C100 10 150 150 200 75" style="fill:none; stroke-width:5; stroke:blue;" />
+    </defs>
+    <g>
+        <use xlink:href="#cubicCurve"/>
+        <path d="M-10 -3 L10 -3 L0 -25 z" style="fill:yellow; stroke:red;">
+            <animateMotion dur="6s" fill="freeze">
+                <mpath xlink:href="#cubicCurve"/>
+            </animateMotion>
+        </path>        
+    </g>
+    <g transform="translate(0,50)">
+        <use xlink:href="#cubicCurve"/>
+        <path d="M-10 -3 L10 -3 L0 -25 z" style="fill:yellow; stroke:red;">
+            <animateMotion dur="6s" fill="freeze" rotate="auto">
+                <mpath xlink:href="#cubicCurve"/>
+            </animateMotion>
+        </path>        
+    </g>
+    <g transform="translate(0,100)">
+        <use xlink:href="#cubicCurve"/>
+        <path d="M-10 -3 L10 -3 L0 -25 z" style="fill:yellow; stroke:red;">
+            <animateMotion dur="6s" fill="freeze" rotate="30">
+                <mpath xlink:href="#cubicCurve"/>
+            </animateMotion>
+        </path>        
+    </g>
+    <g transform="translate(0,180)">
+        <rect width="30" height="30" x="0" y="0" fill="#ccc" />
+        <circle cx="30" cy="30" r="15" style="fill:#cfc; stroke:green;" />
+        <animateMotion from="0,0" to="60,30" dur="4s" fill="freeze" />
+    </g>
+</svg>

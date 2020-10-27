@@ -61,3 +61,7 @@ http://www.w3.org/TR/css3-color/
 ## ch11_blur
 
 ![feTurbulence](ch11_blur/13_feTurbulence.svg)
+
+## ch12_SMIL_animation
+
+![StarAnimation](ch12_SMIL/10_keyframes_css.svg)

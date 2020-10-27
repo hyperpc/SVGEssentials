@@ -1,0 +1,38 @@
+<svg width="400" height="150" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+    <!--normal-->
+    <rect width="20" height="20" x="10" y="10"
+        style="stroke:black; fill:none;">
+        <animate attributeName="width" attributeType="XML"
+            from="20" to="120" begin="0s" dur="8s" fill="freeze" />
+        <animate attributeName="height" attributeType="XML"
+            from="20" to="120" begin="0s" dur="8s" fill="freeze" />
+    </rect>
+    <circle cx="70" cy="70" r="20"
+        style="stroke:black; fill:#ccf;">
+        <animate attributeName="r" attributeType="XML" begin="2s" dur="4s" from="20" to="50" fill="freeze" />
+    </circle>
+    <!--end 1-->
+    <rect width="20" height="20" x="10" y="10" transform="translate(130, 0)"
+        style="stroke:black; fill:none;">
+        <animate attributeName="width" attributeType="XML"
+            from="20" to="120" begin="0s" dur="8s" end="6s" fill="freeze" />
+        <animate attributeName="height" attributeType="XML"
+            from="20" to="120" begin="0s" dur="8s" fill="freeze" />
+    </rect>
+    <circle cx="70" cy="70" r="20" transform="translate(130, 0)"
+        style="stroke:black; fill:#ccf;">
+        <animate attributeName="r" attributeType="XML" begin="2s" dur="4s" from="20" to="50" fill="freeze" />
+    </circle>
+    <!--end 2-->
+    <rect width="20" height="20" x="10" y="10" transform="translate(260, 0)"
+        style="stroke:black; fill:none;">
+        <animate id="end_1" attributeName="width" attributeType="XML"
+            from="20" to="120" begin="0s" dur="8s" end="3s" fill="freeze" />
+        <animate attributeName="height" attributeType="XML"
+            from="20" to="120" begin="0s" dur="8s" end="end_1.end" fill="freeze" />
+    </rect>
+    <circle cx="70" cy="70" r="20" transform="translate(260, 0)"
+        style="stroke:black; fill:#ccf;">
+        <animate attributeName="r" attributeType="XML" begin="2s" dur="4s" end="end_1.end" from="20" to="50" fill="freeze" />
+    </circle>
+</svg>

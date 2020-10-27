@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="30" style="fill:#ff9; stroke:black;">
+        <animate attributeName="fill" begin="2s" dur="4s" 
+            values="#ff9;#99f;#f99;#9f9" fill="freeze" />
+    </circle>
+    <circle cx="50" cy="50" r="30" transform="translate(0,100)"
+        style="fill:#ff9; stroke:black;">
+        <animate attributeName="r" begin="0s" dur="4s" 
+            values="30;10;30;10;30" fill="freeze" />
+    </circle>
+</svg>

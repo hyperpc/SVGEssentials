@@ -1,0 +1,14 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+    <text x="0" y="25">from-to:</text>
+    <rect x="0" y="0" width="200" height="50" stroke="black" fill="none">
+        <animate attributeName="width" attributeType="XML"
+            from="200" to="20"
+            begin="0s" dur="5s" fill="freeze" />
+    </rect>
+    <text x="0" y="75">from-by:</text>
+    <rect x="0" y="49" width="200" height="50" stroke="black" fill="none">
+        <animate attributeName="width" attributeType="XML"
+            from="200" by="-180"
+            begin="0s" dur="5s" fill="freeze" />
+    </rect>
+</svg>

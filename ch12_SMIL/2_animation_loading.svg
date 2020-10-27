@@ -1,0 +1,18 @@
+<svg width="250" height="100" viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="60" r="30" style="fill:#f9f; stroke:gray;">
+        <animate id="c1" attributeName="r" attributeType="XML"
+            begin="0s" dur="4s" from="10" to="30" fill="freeze" />
+        <animate id="c2" attributeName="r" attributeType="XML"
+            begin="c1.end" dur="4s" from="30" to="10" fill="freeze" />
+    </circle>
+    <circle cx="90" cy="60" r="0" style="fill:green; stroke:gray;">
+        <animate id="c5" attributeName="r" attributeType="XML"
+            begin="c4.end+2s" dur="4s" from="0" to="30" fill="freeze" />
+    </circle>
+    <circle cx="120" cy="60" r="10" style="fill:#f9f; stroke:gray;">
+        <animate id="c3" attributeName="r" attributeType="XML"
+            begin="c2.end" dur="4s" from="10" to="30" fill="freeze" />
+        <animate id="c4" attributeName="r" attributeType="XML"
+            begin="c3.end" dur="4s" from="30" to="10" fill="freeze" />
+    </circle>
+</svg>
