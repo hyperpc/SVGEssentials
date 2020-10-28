@@ -1,0 +1,32 @@
+<svg width="350" height="130" viewBox="0 0 350 130" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Access content in SVG</title>
+    <rect id="rectangle" width="30" height="40" x="10" y="20"
+        style="stroke:gray; fill:#ff9; stroke-width:3;" />
+    <text id="output1" x="50" y="20" style="font-size:9pt;"></text>
+    <text id="output2" x="50" y="40" style="font-size:9pt;"></text>
+    <text id="output3" x="50" y="60" style="font-size:9pt;"></text>
+    <text id="output4" x="10" y="80" style="font-size:9pt;"></text>
+    <text id="output5" x="10" y="100" style="font-size:9pt;"></text>
+    <script type="application/ecmascript">
+        var txt1 = document.getElementById("output1");
+        var txt2 = document.getElementById("output2");
+        var txt3 = document.getElementById("output3");
+        var txt4 = document.getElementById("output4");
+        var txt5 = document.getElementById("output5");
+        var r = document.getElementById("rectangle");
+        var msg1 = "x="+r.getAttribute("x")+", y="+r.getAttribute("y");
+        var msg2 = "width="+r.getAttribute("width")+", height="+r.getAttribute("height");
+        var new_height="30";
+        r.setAttribute("height", new_height);
+        var msg3 = "width="+r.getAttribute("width")+", height="+r.getAttribute("height");
+        var msg4 = "style.stroke="+r.style.getPropertyValue("stroke");
+        var msg5 = "style.fill="+r.style.getPropertyValue("fill");
+        txt1.textContent=msg1;
+        txt2.textContent=msg2;
+        txt3.textContent=msg3;
+        txt4.textContent=msg4;
+        txt5.textContent=msg5;
+    </script>
+</svg>

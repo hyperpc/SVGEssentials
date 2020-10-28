@@ -1,0 +1,24 @@
+<svg width="100" height="100" viewBox="0 0 100 100" 
+    xmlns="http://www.w3.org/2000/svg">
+    <circle id="circle" cx="50" cy="50" r="20" style="stroke:black; stroke-width:1; fill:#ff9;" />
+    <script type="application/ecmascript"><![CDATA[
+        function grow(evt){
+            var obj=evt.target;
+            obj.setAttribute("r", "30");
+        }
+        function shrink(evt){
+            this.setAttribute("r", "20");
+        }
+        function reStroke(evt){
+            var w=evt.target.style.getPropertyValue("stroke-width");
+            w=4-parseFloat(w);/*toggle between 1 and 3*/
+            evt.target.style.setProperty("stroke-width",w,null);
+        }
+
+        var c=document.getElementById("circle");
+        c.addEventListener("mouseover", grow);
+        c.addEventListener("mouseout", shrink);
+        c.addEventListener("click", reStroke);
+
+    ]]></script>
+</svg>

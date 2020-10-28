@@ -65,3 +65,7 @@ http://www.w3.org/TR/css3-color/
 ## ch12_SMIL_animation
 
 ![StarAnimation](ch12_SMIL/10_keyframes_css.svg)
+
+## ch13_SVG_HTML_Interactive
+
+![SvgHtmlInteractive](ch13_interactive/3_trigger_SMIL.svg)
