@@ -69,3 +69,6 @@ http://www.w3.org/TR/css3-color/
 ## ch13_SVG_HTML_Interactive
 
 ![SvgHtmlInteractive](ch13_interactive/3_trigger_SMIL.svg)
+## ch14_SVG_DOM
+
+![SVGDom](ch14_SVG_DOM/2_color.svg)

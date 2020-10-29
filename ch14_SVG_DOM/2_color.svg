@@ -1,0 +1,150 @@
+<svg id="clock" width="500" height="250" viewBox="0 0 500 250"
+     xmlns="http://www.w3.org/2000/svg" onload="init()">
+    <title>SVG Clock (Analog and Script)</title>
+    <g transform="translate(250, 0)">
+        <circle id="face" cx="125" cy="125" r="100" style="fill:white; stroke:black;" />
+        <g id="ticks" transform="translate(125,125)">
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(30)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(60)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(90)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(120)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(150)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(180)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(210)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(240)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(270)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(300)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(330)" />
+            <path d="M95 0 L100 -5 L100 5 Z" transform="rotate(360)" />
+        </g>
+        <g id="hands" style="stroke-linecap:round;">
+            <path id="hour" d="M125 125 L125 75" transform="rotate(0,125,125)" style="stroke:blue; stroke-width:5px;"/>
+            <path id="minute" d="M125 125 L125 45" transform="rotate(0,125,125)" style="stroke:green; stroke-width:3px;" />
+            <path id="second" d="M125 125 L125 30" transform="rotate(0,125,125)" style="stroke:red; stroke-width:2px;" />
+        </g>
+        <circle id="knob" r="6" cx="125" cy="125" style="fill:#333;" />
+        <text x="80" y="240">Analog Clock</text>
+    </g>
+    <script type="application/ecmascript"><![CDATA[
+        if(!window.requestAnimationFrame){
+            window.requestAnimationFrame=function(animationFunction){
+                function wrapperFunction(){
+                    animationFunction(Date.now());
+                }
+                setTimeout(wrapperFunction, 30);
+            }
+        }
+
+        var hour_hand,hour_hand_s;
+        var minute_hand,minute_hand_s;
+        var second_hand,second_hand_s;
+        
+        var hour_transform,hour_transform_s;
+        var minute_transform,hour_transform_s;
+        var second_transform,hour_transform_s;
+
+        var secPerMin=60,
+            secPerHour=60*60,
+            secPer12Hours=60*60*12;
+
+        var clock;
+        function init(){
+            // draw clock
+            clock=document.getElementById("clock");
+            var svgns=clock.namespaceURI, doc = document;
+
+            clock.suspendRedraw(1000);
+
+            var face=doc.createElementNS(svgns, "circle");
+            face.cx.baseVal.value=125;
+            face.cy.baseVal.value=125;
+            face.r.baseVal.value=100;
+            face.style.cssText="fill:white; stroke:black;";
+            clock.appendChild(face);
+
+            var ticks=clock.appendChild(doc.createElementNS(svgns,"g"));
+            ticks.setAttribute("transform", "translate(125,125)");
+
+            var tickMark;
+            for(var i=1;i<=12;i++){
+                tickMark=doc.createElementNS(svgns, "path");
+                tickMark.setAttribute("d","M95 0 L100 -5 L100 5 Z");
+                tickMark.setAttribute("transform","rotate("+(30*i)+")");
+                ticks.appendChild(tickMark);
+            }
+
+            var hands=clock.appendChild(doc.createElementNS(svgns,"g"));
+            hands.style.cssText="stroke-linecap:round;";
+
+            var hour_hand=hands.appendChild(doc.createElementNS(svgns,"path"));
+            hour_hand.id="hour_s";
+            hour_hand.setAttribute("d","M125,125 L125,75");
+            hour_hand.setAttribute("transform","rotate(0,125,125)");
+            hour_hand.style.cssText="stroke:blue; stroke-width:5px;";
+            
+            var minute_hand=hands.appendChild(doc.createElementNS(svgns,"path"));
+            minute_hand.id="minute_s";
+            minute_hand.setAttribute("d","M125,125 L125,45");
+            minute_hand.setAttribute("transform","rotate(0,125,125)");
+            minute_hand.style.cssText="stroke:green; stroke-width:3px;";
+            
+            var second_hand=hands.appendChild(doc.createElementNS(svgns,"path"));
+            second_hand.id="second_s";
+            second_hand.setAttribute("d","M125,125 L125,30");
+            second_hand.setAttribute("transform","rotate(0,125,125)");
+            second_hand.style.cssText="stroke:red; stroke-width:3px;";
+
+            var knob = doc.createElementNS(svgns, "circle");
+            knob.setAttribute("cx","125");
+            knob.setAttribute("cy","125");
+            knob.setAttribute("r","6");
+            knob.style.setProperty("fill","#333", null);
+            clock.appendChild(knob);
+
+            var label=doc.createElementNS(svgns, "text");
+            label.setAttribute("x","80");
+            label.setAttribute("y","240");
+            label.textContent="Script Clock";
+            clock.appendChild(label);
+
+            clock.unsuspendRedrawAll();
+
+            // add animation to analog clock
+            hour_hand=document.getElementById("hour");
+            minute_hand=document.getElementById("minute");
+            second_hand=document.getElementById("second");
+            hour_transform=hour_hand.transform.baseVal.getItem(0);
+            minute_transform=minute_hand.transform.baseVal.getItem(0);
+            second_transform=second_hand.transform.baseVal.getItem(0);
+
+            // add animation to script clock
+            hour_hand_s=document.getElementById("hour_s");
+            minute_hand_s=document.getElementById("minute_s");
+            second_hand_s=document.getElementById("second_s");
+            hour_transform_s=hour_hand_s.transform.baseVal.getItem(0);
+            minute_transform_s=minute_hand_s.transform.baseVal.getItem(0);
+            second_transform_s=second_hand_s.transform.baseVal.getItem(0);
+            updateClock();
+        }
+        function updateClock(){
+            var date = new Date();
+            var time = date.getMilliseconds()/1000
+                     + date.getSeconds()
+                     + date.getMinutes()*60
+                     + date.getHours()*60*60;
+            var s=360*(time%secPerMin)/secPerMin,
+                m=360*(time%secPerHour)/secPerHour,
+                h=360*(time%secPer12Hours)/secPer12Hours;
+
+            second_transform.setRotate(s,125,125);
+            minute_transform.setRotate(m,125,125);
+            hour_transform.setRotate(h,125,125);
+
+            second_transform_s.setRotate(s,125,125);
+            minute_transform_s.setRotate(m,125,125);
+            hour_transform_s.setRotate(h,125,125);
+
+            window.requestAnimationFrame(updateClock);
+        }
+    ]]></script>
+</svg>
