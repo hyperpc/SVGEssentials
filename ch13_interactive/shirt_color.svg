@@ -41,10 +41,11 @@
                 }
                 if(sliderChoice>=0){
                     if(parent){
-                        parent.setShirtColor=svgSetShirtColor;
+                        //parent.setShirtColor=svgSetShirtColor;
                     }
                 }
                 transformShirt();
+                top.setShirtColor = svgSetShirtColor;
             }
             function clickButton(evt){
                 var choice=evt.target.parentNode;
@@ -70,8 +71,9 @@
             function endColorDrag(evt){
                 if(sliderChoice>=0){
                     if(parent){
-                        parent.updateHTMLField(sliderChoice,rgb[sliderChoice]);
+                        //parent.updateHTMLField(sliderChoice,rgb[sliderChoice]);
                     }
+                    top.updateHTMLField(sliderChoice, rgb[sliderChoice]);
                 }
                 sliderChoice=-1;
             }
