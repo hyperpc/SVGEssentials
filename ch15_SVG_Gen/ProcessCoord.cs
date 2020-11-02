@@ -35,8 +35,8 @@ namespace SimpleTesting.MichiganMap
             var svg_wh = string.Format("<svg width=\"{0}\" height=\"{1}\"", width_svg, height_svg);
             var svg_ns = "    xmlns=\"http://www.w3.org/2000/svg\"";
             var svg_vb = string.Format("    viewBox=\"{0} {1} {2} {3}\">", minX, minY, deltaX, deltaY);
-            var svg_title = "   <title>Map constructed from michigan.dat</title>";
-            var svg_top_g = "   <g style=\"fill: none; stroke: black; stroke-width: 0.0266839033333333\">";
+            var svg_title = "    <title>Map constructed from michigan.dat</title>";
+            var svg_top_g = "    <g style=\"fill: none; stroke: black; stroke-width: 0.0266839033333333\">";
 
             var svgfile = GenerateSVGFile();
             using(var sr=new StreamWriter(svgfile, true, Encoding.UTF8))
@@ -57,16 +57,16 @@ namespace SimpleTesting.MichiganMap
                 using (var sr = new StreamWriter(svgfile, true, Encoding.UTF8))
                 {
                     sr.WriteLine();
-                    var svg_polygon = string.Format("       <polyline id=\"poly{0}\" points=\"", i);
+                    var svg_polygon = string.Format("        <polyline id=\"poly{0}\" points=\"", i);
                     if (i == 1)
                     {
-                        sr.WriteLine("       <!--data issue: not closed curve-->");
-                        svg_polygon = string.Format("       <polyline id=\"poly{0}\" stroke=\"red\" points=\"", i);
+                        sr.WriteLine("        <!--data issue: not closed curve-->");
+                        svg_polygon = string.Format("        <polyline id=\"poly{0}\" stroke=\"red\" points=\"", i);
                     }
                     else if (i == 4)
                     {
-                        sr.WriteLine("       <!--data issue: last coordination(x,y) should be removed, or a horizontal line drawed.-->");
-                        svg_polygon = string.Format("       <polyline id=\"poly{0}\" stroke=\"green\" points=\"", i);
+                        sr.WriteLine("        <!--data issue: last coordination(x,y) should be removed, or a horizontal line drew.-->");
+                        svg_polygon = string.Format("        <polyline id=\"poly{0}\" stroke=\"green\" points=\"", i);
                     }
                     sr.WriteLine(svg_polygon);
                 }
@@ -79,6 +79,7 @@ namespace SimpleTesting.MichiganMap
                 var coordIndex_current = from c in polygons_current select c.Field<int>("CoordIndex");
                 var maxCoordIndex = coordIndex_current.ToList().Max();
                 var sbCoordsLine = new StringBuilder();
+                var newLineCount = 0;
                 for(int j = 0; j < maxCoordIndex; j++)
                 {
                     var coordX_c = polygons_current
@@ -95,13 +96,13 @@ namespace SimpleTesting.MichiganMap
                     var coord_Y = ((decimal)((int)((minY + maxY - coordY_c) * 1000)) / 1000);
                     if (coord_X == (decimal)0 || coord_Y == 0) { continue; }
                     sbCoordsLine.AppendFormat("{0} {1} ", coord_X, coord_Y);
-
-                    if ((j % 8 == 0 && j>0) || (j==7))
+                    newLineCount++;
+                    if (newLineCount % 8 == 0)
                     {
                         using (var sr = new StreamWriter(svgfile, true, Encoding.UTF8))
                         {
                             var sb_tmp = new StringBuilder();
-                            sr.Write("          ");
+                            sr.Write("                ");
                             sr.Write(sbCoordsLine.ToString().Trim());
                             sr.WriteLine();
                             sbCoordsLine.Clear();
@@ -111,14 +112,15 @@ namespace SimpleTesting.MichiganMap
 
                 using (var sr = new StreamWriter(svgfile, true, Encoding.UTF8))
                 {
-                    var svg_polygon_close = string.Format("\"/>");
-                    sr.Write(svg_polygon_close);
+                    var svg_polygon_close = string.Format("        \"/>");
+                    sr.WriteLine(svg_polygon_close);
                 }
             }
 
             using (var sr = new StreamWriter(svgfile, true, Encoding.UTF8))
             {
-                sr.WriteLine("  </g>");
+                sr.WriteLine();
+                sr.WriteLine("    </g>");
                 sr.WriteLine("</svg>");
             }
         }
