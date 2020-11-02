@@ -76,7 +76,8 @@ http://www.w3.org/TR/css3-color/
 
 ## ch15_SVG_Gen
 
-![MichiganMap](ch15_SVG_Gen/michigan.svg)
+![MichiganMap](ch15_SVG_Gen/michigan.svg)  
+
 the map have little issue:
 
 1. left top corner is not closed curve
