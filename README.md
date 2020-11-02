@@ -75,3 +75,11 @@ http://www.w3.org/TR/css3-color/
 ![SVGDom](ch14_SVG_DOM/2_color.svg)
 
 ## ch15_SVG_Gen
+
+![MichiganMap](ch15_SVG_Gen/michigan.svg)
+the map have little issue:
+
+1. left top corner is not closed curve
+2. right bottom large map have an unexpected line
+
+the root cause is data issue from michigan.dat file
