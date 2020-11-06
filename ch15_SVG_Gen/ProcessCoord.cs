@@ -58,14 +58,9 @@ namespace SimpleTesting.MichiganMap
                 {
                     sr.WriteLine();
                     var svg_polygon = string.Format("        <polyline id=\"poly{0}\" points=\"", i);
-                    if (i == 1)
+                    if (i == 4)
                     {
-                        sr.WriteLine("        <!--data issue: not closed curve-->");
-                        svg_polygon = string.Format("        <polyline id=\"poly{0}\" stroke=\"red\" points=\"", i);
-                    }
-                    else if (i == 4)
-                    {
-                        sr.WriteLine("        <!--data issue: last coordination(x,y) should be removed, or a horizontal line drew.-->");
+                        sr.WriteLine("        <!--data issue: first or last coordination(x,y) should be removed, or some horizontal lines drew.-->");
                         svg_polygon = string.Format("        <polyline id=\"poly{0}\" stroke=\"green\" points=\"", i);
                     }
                     sr.WriteLine(svg_polygon);
@@ -180,25 +175,17 @@ namespace SimpleTesting.MichiganMap
                         if (lineArr_Length == 2)
                         {
                             var cx_f = 0d;
-                            var cx_s = lineArr[0];
-                            if (Double.TryParse(cx_s, out cx_f))
-                            {
-                                coorX = (decimal)cx_f;
-                            }
-                            else
+                            if (!Double.TryParse(lineArr[0], out cx_f))
                             {
                                 continue;
                             }
+                            coorX = (decimal)cx_f;
                             var cy_f = 0d;
-                            var cy_s = lineArr[1];
-                            if (Double.TryParse(cy_s, out cy_f))
-                            {
-                                coorY = (decimal)cy_f;
-                            }
-                            else
+                            if (!Double.TryParse(lineArr[1], out cy_f))
                             {
                                 continue;
                             }
+                            coorY = (decimal)cy_f;
                             DataRow row = table.NewRow();
                             row["CoordIndex"] = indx;
                             row["PolygonNo"] = polyline_no;
@@ -209,34 +196,26 @@ namespace SimpleTesting.MichiganMap
                         }
                         else if (lineArr_Length == 3)
                         {
-                            //var cx_f = 0d;
-                            //var cx_s = lineArr[1];
-                            //if (Double.TryParse(cx_s, out cx_f))
-                            //{
-                            //    coorX = (decimal)cx_f;
-                            //}
-                            //else
-                            //{
-                            //    continue;
-                            //}
-                            //var cy_f = 0d;
-                            //var cy_s = lineArr[2];
-                            //if (Double.TryParse(cy_s, out cy_f))
-                            //{
-                            //    coorY = (decimal)cy_f;
-                            //}
-                            //else
-                            //{
-                            //    continue;
-                            //}
-                            //DataRow row = table.NewRow();
-                            //row["CoordIndex"] = indx;
-                            //row["PolygonNo"] = polyline_no;
-                            //row["CoordX"] = coorX;
-                            //row["CoordY"] = coorY;
-                            //table.Rows.Add(row);
+                            var cx_f = 0d;
+                            if (!Double.TryParse(lineArr[1], out cx_f))
+                            {
+                                continue;
+                            }
+                            coorX = (decimal)cx_f;
+                            var cy_f = 0d;
+                            if (!Double.TryParse(lineArr[2], out cy_f))
+                            {
+                                continue;
+                            }
+                            coorY = (decimal)cy_f;
                             polyline_no++;
-                            //indx++;
+                            DataRow row = table.NewRow();
+                            row["CoordIndex"] = indx;
+                            row["PolygonNo"] = polyline_no;
+                            row["CoordX"] = coorX;
+                            row["CoordY"] = coorY;
+                            table.Rows.Add(row);
+                            indx++;
                         }
                         else
                         {
