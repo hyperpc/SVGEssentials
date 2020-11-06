@@ -24,8 +24,8 @@ namespace SimpleTesting.RedFlag
             var svg_ns2 = "    xmlns:xlink=\"http://www.w3.org/1999/xlink\">";
             var svg_title = "    <title>Red Flag constructed from starCoord.dat</title>";
             var svg_top_g = "    <g style=\"fill: none; stroke: none; \">";
-            var svg_red_bg_full = "        <rect width=\"900\" height=\"600\" fill=\"red\" />";
-            var svg_red_bg_lt = "        <rect width=\"450\" height=\"300\" fill=\"red\" transform=\"translate(0, 0)\" />";
+            var svg_red_bg_full = "        <rect width=\"900\" height=\"600\" fill=\"#DE2910\" />";
+            var svg_red_bg_lt = "        <rect width=\"450\" height=\"300\" fill=\"#DE2910\" transform=\"translate(0, 0)\" />";
 
             var file = GenerateSVGFile();
             using (var sr = new StreamWriter(file, true, Encoding.UTF8))
@@ -51,11 +51,11 @@ namespace SimpleTesting.RedFlag
                     sr.WriteLine();
                     if (i == maxStarNo && i==5)
                     {
-                        sr.WriteLine(string.Format("        <polygon id=\"little_star_{0}\" transform=\"scale(3) translate(50,50) rotate(14)\" fill=\"yellow\" stroke=\"yellow\"", i));
+                        sr.WriteLine(string.Format("        <polygon id=\"little_star_{0}\" transform=\"scale(3) translate(50,50) rotate(14)\" fill=\"#FFDE00\" stroke=\"#FFDE00\"", i));
                     }
                     else
                     {
-                        sr.WriteLine(string.Format("        <polygon id=\"little_star_{0}\" fill=\"yellow\" stroke=\"yellow\"", i));
+                        sr.WriteLine(string.Format("        <polygon id=\"little_star_{0}\" fill=\"#FFDE00\" stroke=\"#FFDE00\"", i));
                     }
                     sr.WriteLine("                points=\"");
                 }

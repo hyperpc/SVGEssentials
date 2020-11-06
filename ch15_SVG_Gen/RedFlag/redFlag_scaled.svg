@@ -5,10 +5,10 @@
     <title>Red Flag constructed from starCoord.dat</title>
 
     <g style="fill: none; stroke: none; " transform="scale(0.5)">
-        <rect width="900" height="600" fill="red" />
-        <rect width="450" height="300" fill="red" transform="translate(0, 0)" />
+        <rect width="900" height="600" fill="#DE2910" />
+        <rect width="450" height="300" fill="#DE2910" transform="translate(0, 0)" />
 
-        <polygon id="little_star_1" fill="yellow" stroke="yellow"
+        <polygon id="little_star_1" fill="#FFDE00" stroke="#FFDE00"
                 points="
                 274 75 294.9688402861076 71.29043118899132
                 306.2279468807587 89.34642529594444 309.1831243010649 68.2738523416383
@@ -17,7 +17,7 @@
                 277.71208913694284 39.91893853999697 287.70744799292044 58.70401788080022
         "/>
 
-        <polygon id="little_star_2" fill="yellow" stroke="yellow"
+        <polygon id="little_star_2" fill="#FFDE00" stroke="#FFDE00"
                 points="
                 330 124 351.04794662622885 128.52332944882426
                 354.58166701802503 149.5066376887717 365.3398313857878 131.1477623436902
@@ -26,7 +26,7 @@
                 347.0399569854028 92.9438124441046 349.1274953601185 114.1199449529961
         "/>
 
-        <polygon id="little_star_3" fill="yellow" stroke="yellow"
+        <polygon id="little_star_3" fill="#FFDE00" stroke="#FFDE00"
                 points="
                 331 202 348.42798655225664 214.34452635684133
                 343.4758917594878 235.03904644461997 360.5559412874019 222.34817127290532
@@ -35,7 +35,7 @@
                 358.6507021518516 180.0303587723012 352.29216108362186 200.3368936806424
         "/>
 
-        <polygon id="little_star_4" fill="yellow" stroke="yellow"
+        <polygon id="little_star_4" fill="#FFDE00" stroke="#FFDE00"
                 points="
                 277 251 287.66316791832514 269.2325505302629
                 274.6814839938253 286.09263021525925 295.4578214108917 281.4958696132432
@@ -44,7 +44,7 @@
                 311.02409901022384 242.09893835330308 296.91759704913306 258.0298205298112
         "/>
 
-        <polygon id="little_star_5" transform="scale(3) translate(50,50) rotate(14)" fill="yellow" stroke="yellow"
+        <polygon id="little_star_5" transform="scale(3) translate(50,50) rotate(14)" fill="#FFDE00" stroke="#FFDE00"
                 points="
                 -29 -2 -10.476179739972762 6.5601876921187445
                 -11.211582094563106 27.826254274279748 3.0017916769306936 11.99064849073442

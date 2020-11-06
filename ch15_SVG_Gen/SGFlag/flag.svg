@@ -1,0 +1,25 @@
+<svg width="900" height="600" viewBox="0 0 900 600" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>        
+        <polygon id="little_star" transform="scale(0.9) rotate(14)" fill="#FFF" stroke="#FFF"
+                points="
+                -29 -2 -10.476179739972762 6.5601876921187445
+                -11.211582094563106 27.826254274279748 3.0017916769306936 11.99064849073442
+                22.99977105058976 19.261633669563267 12.331389023462476 0.8504406223077557
+                25.42622233729345 -15.921909987640289 4.6194258680664895 -11.465047280734614
+                -7.285501440630613 -29.101915207741385 -9.476426828486899 -7.936229524426307
+        "/>
+    </defs>
+    <!--Red : Pantone 032-->
+    <rect width="900" height="300" stroke="#EF3340" fill="#EF3340"/>
+    <!--White : Pantone White-->
+    <rect width="900" height="300" transform="translate(0, 300)" stroke="#FFF" fill="#FFF"/>
+    <circle cx="170" cy="150" r="100" style="stroke:#FFF; fill:#FFF;" />
+    <circle cx="225" cy="150" r="100" style="stroke:#EF3340; fill:#EF3340;" />
+    <use xlink:href="#little_star" transform="translate(225, 95)"/>
+    <use xlink:href="#little_star" transform="translate(170, 135)"/>
+    <use xlink:href="#little_star" transform="translate(280, 135)"/>
+    <use xlink:href="#little_star" transform="translate(190, 195)"/>
+    <use xlink:href="#little_star" transform="translate(260, 195)"/>
+</svg>
