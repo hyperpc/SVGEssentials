@@ -3,5 +3,9 @@
     <line x1="0" x2="100" y1="0" y2="0" style="stroke:gray;" />
     <rect width="20" height="15" x="10" y="10" style="fill:gray;"/>
     <rect width="20" height="15" x="10" y="10" style="fill:gray;" transform="translate(30, 20) scale(2)" />
+    <rect width="20" height="15" x="10" y="10" style="fill:yellow;" transform="scale(2)" />
     <rect width="20" height="15" x="10" y="10" style="fill:yellow;" transform="scale(2) translate(30, 20)" />
+    
+    <rect width="20" height="20" x="0" y="0" style="fill:red;"/>    
+    <rect width="20" height="20" x="0" y="0" style="fill:red;" transform="scale(2) translate(10, 10)" />
 </svg>

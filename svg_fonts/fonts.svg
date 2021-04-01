@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+width="588.5" height="808" viewBox="0 0 588.5 808">
+  <style type="text/css">
+    @font-face{
+      font-family: "GothamRnd-Bold";
+      src: url("./GothamRnd-Bold/GothamRnd-Bold.eot"),
+           url("./GothamRnd-Bold/GothamRnd-Bold.otf"),
+           url("./GothamRnd-Bold/GothamRnd-Bold.ttf"),
+           url("./GothamRnd-Bold/GothamRnd-Bold.woff"),
+           url("./GothamRnd-Bold/GothamRnd-Bold.woff2");
+    }
+  </style>
+  <defs>
+    <clipPath id="clip-grp_1">
+      <rect width="1280" height="1809"/>
+    </clipPath>
+  </defs>
+  <g id="grp1" data-name="Group 1" clip-path="url(#clip-grp_1)" 
+      transform="scale(0.46) translate(0, -52.48)">
+    <rect width="1280" height="1809" fill="#f0f0f0" />
+  </g>
+  <text x="30" y="50" font-family="GothamRnd-Bold" font-size="20" fill="#e68717">
+    This is a text to using local-imported font family~
+  </text>
+  <text x="120" y="200" font-family="GothamRnd-Bold" font-size="70" fill="#e68717"
+  stroke="cyan" stroke-width="0.5">
+    Colorful
+  </text>
+</svg>

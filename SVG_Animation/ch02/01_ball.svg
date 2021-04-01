@@ -1,0 +1,33 @@
+<svg width="150px" height="70px" viewBox="0 0 150 70" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        @keyframes rolling-ball{
+            from{
+                fill: blue;
+                transform: translateX(0);
+            }
+            25%{
+                fill: green;
+                transform: translateX(25px);
+            }
+            50%{
+                fill: purple;
+                transform: translateX(50px);
+            }
+            75%{
+                fill: yellow;
+                transform: translateX(75px);
+            }
+            to{
+                fill: red;
+                transform: translateX(100px);
+            }
+        }
+        .ball{
+            animation: rolling-ball 2s 2s 3 alternate ease-in-out forwards;
+            /*above property duration, delay, iteration count cannot change position*/
+        }
+    </style>
+    <circle class="ball" cx="35" cy="35" r="25" />
+</svg>

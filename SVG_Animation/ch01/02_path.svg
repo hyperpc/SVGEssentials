@@ -1,0 +1,12 @@
+<svg width="200px" height="100px" viewBox="0 0 200 100" 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="translate(10,10)" fill="none">
+        <path d="M0,0 20,20 L20,40 l10,0" stroke="blue"/>
+        <path d="M10,10 H40 V20 h40 v20z" stroke="green" />
+        <path d="M80,10 90,15 C100,20 110,15 120,10" stroke="blue" />
+        <path d="M80,20 90,25 Q100,30 110,25 120,20" stroke="blue" />
+        <path d="M80,30 90,35 T100,40 110,35 120,30" stroke="blue" />
+        <path d="M80,40 90,45 100,50 110,45 120,40" stroke="blue" />
+    </g>
+</svg>
