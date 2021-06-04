@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+ 
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <style>
+        .water {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 5s linear 1;
+        }
+         
+        .no-water {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+        }
+         
+        .first-run {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 5s linear 1;
+        }
+         
+        .runing {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: run 10s linear infinite;
+        }
+         
+        .runwater {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: run 10s linear infinite;
+        }
+         
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+         
+        @keyframes run {
+            from {
+                stroke-dasharray: 10, 5;
+            }
+            to {
+                stroke-dasharray: 40, 5;
+            }
+        }
+    </style>
+ 
+</head>
+ 
+<body>
+ 
+ 
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="800" width="800" >
+        <polyline class="pipeline" points="10,10 10,200 200,200 200,400 400,400 400,600" style="fill:white;stroke:gray;stroke-width:2"
+        />
+ 
+        <polyline class="water" id="water" points="10,10 10,200 200,200" style="fill:white;stroke:blue;stroke-width:2" />
+ 
+        <polyline class="no-water" id="water2" points="200,200 200,400 400,400 400,600" style="fill:white;stroke:blue;stroke-width:2"
+        />
+ 
+ 
+        <rect id="key" width="20" height="20" x=190 y=190 style="fill:gray;stroke-width:1;stroke:rgb(0,0,0)" />
+ 
+        <text style="fill:black;" x=220 y=190 font-size="20" font-family="YouYuan" x="100" y="100" width="200" height="30">点击阀门
+        </text>
+    </svg>
+ 
+    <script type="text/javascript">
+        var keybtn=document.querySelector('#key');
+        var water1 = document.querySelector('#water');
+    var water2 = document.querySelector('#water2');
+     
+    water2.addEventListener("webkitAnimationEnd", function(evt){ //动画结束时事件
+ this.className.baseVal="runing";
+  
+ water1.className.baseVal="runing";
+}, false);  
+ 
+  water1.addEventListener("webkitAnimationEnd", function(evt){ //动画结束时事件
+ this.style.strokeDashoffset=0;
+}, false);
+ 
+    keybtn.addEventListener("click", function(){    
+        water2.className.baseVal="first-run";
+}, false);
+    </script>
+</body>
+ 
+</html>

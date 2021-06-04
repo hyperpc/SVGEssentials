@@ -1,0 +1,34 @@
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>svg path 绘制各种</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <style>.line{stroke:#900;fill:none;stroke-width:2px}</style>
+  <meta name="generator" content="Hexo 4.2.0" />
+ </head>
+ <body class="vsc-initialized">
+  <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+    <marker id="arrow" markerunits="strokeWidth" markerwidth="12" markerheight="12" viewbox="0 0 12 12" refx="6" refy="6" orient="auto">
+     <path d="M2,2 L10,6 L2,10 L6,6 L2,2" style="fill:#000"></path>
+    </marker>
+    <lineargradient id="line-gradient" x1="0" y1="0" x2="1" y2="0">
+     <stop offset="0" stop-color="#990000" stop-opacity="0"></stop>
+     <stop offset="1" stop-color="#990000" stop-opacity="1"></stop>
+    </lineargradient>
+   </defs>
+   <path class="line" d="M30 30 L200 30"></path>
+   <path class="line" d="M30 60 L200 60" style="stroke-dasharray:5"></path>
+   <path class="line" d="M30 90 Q115 139 200 90"></path>
+   <path class="line" d="M30 120 Q115 169 200 120" style="stroke:url(#line-gradient)"></path>
+   <path class="line" d="M30 150 Q115 199 200 150" style="marker-end:url(#arrow)"></path>
+   <path class="line" d="M30 180 Q115 229 200 180" style="shape-rendering:optimizeSpeed"></path>
+  </svg>
+ </body>
+</html>
